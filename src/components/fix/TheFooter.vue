@@ -1,7 +1,7 @@
 <template>
     <footer>
         <p>Copyright&#169;Jovana Davidović</p>
-        <a href="../../assets/dokumentacija"><i class="fa-regular fa-file"></i></a>
+        <a href="../../assets/dokumentacija.pdf"><i class="fa-regular fa-file"></i></a>
     </footer>
 </template>
 <style scoped>
