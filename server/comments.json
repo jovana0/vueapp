@@ -1,0 +1,20 @@
+[
+    {
+        "bookId": "3",
+        "comment": "lepo",
+        "user": "pera",
+        "date": "2024-06-28T20:45:08.386Z"
+    },
+    {
+        "bookId": "2",
+        "comment": "Jako dobra knjiga",
+        "user": "pera",
+        "date": "2024-06-29T11:59:48.418Z"
+    },
+    {
+        "bookId": "1",
+        "comment": "Zanimljivo",
+        "user": "pera",
+        "date": "2024-06-30T12:30:56.580Z"
+    }
+]
