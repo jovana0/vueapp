@@ -25,7 +25,7 @@
         <h4>My Favorite Books</h4>
         <div id="l">
         <div class="card mb-3 me-3" style="width: 18rem;" v-for="book in favorites" :key="book.id">
-          <a :href="'/book/'+book.id">
+          <a :href="'#/book/'+book.id">
             <img class="card-img-top" :src="book.img" :alt="book.name">
             <div class="card-body">
               <h5 class="card-title">{{ book.name }}</h5>
