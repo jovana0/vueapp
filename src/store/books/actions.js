@@ -24,7 +24,7 @@ export default{
         const userId = rootState.auth.currentUser.id;
         if (userId) {
           try {
-            const response = await axios.post('https://github.com/jovana0/vueapp/tree/main/server/addToFavorites.php', {
+            const response = await axios.post(`${process.env.VUE_APP_API_URL}/addToFavorites.php`, {
               userId,
               bookId
             });
@@ -42,7 +42,7 @@ export default{
     },
     async addComment({ commit }, commentData) {
       try {
-        const response = await axios.post('https://github.com/jovana0/vueapp/tree/main/server/comments.php', commentData);
+        const response = await axios.post(`${process.env.VUE_APP_API_URL}/comments.php`, commentData);
         if (response.data.success) {
           commit('ADD_COMMENT', commentData);
         } else {
@@ -54,7 +54,7 @@ export default{
     },
     async getCommentsByBookId({ commit }, bookId) {
       try {
-        const response = await axios.get(`https://github.com/jovana0/vueapp/tree/main/server/comments.php?bookId=${bookId}`);
+        const response = await axios.get(`${process.env.VUE_APP_API_URL}/comments.php?bookId=${bookId}`);
         if (response.status === 200) {
           commit('SET_COMMENTS', response.data);
           return response.data;
@@ -68,7 +68,7 @@ export default{
     },
     async getUserComments({ commit }, username) {
       try {
-        const response = await axios.get(`https://github.com/jovana0/vueapp/tree/main/server/getComments.php?username=${username}`);
+        const response = await axios.get(`${process.env.VUE_APP_API_URL}/getComments.php?username=${username}`);
         commit('SET_USER_COMMENTS', response.data);
         return response.data;
       } catch (error) {
@@ -78,7 +78,7 @@ export default{
     },
     async getUserFavorites({ commit }, userId) {
       try {
-        const response = await axios.get(`https://github.com/jovana0/vueapp/tree/main/server/getFavorites.php?userId=${userId}`);
+        const response = await axios.get(`${process.env.VUE_APP_API_URL}/getFavorites.php?userId=${userId}`);
         commit('SET_USER_FAVORITES', response.data);
         return response.data;
       } catch (error) {
@@ -88,7 +88,7 @@ export default{
     },
     async removeBookFromFavorites({ commit }, { userId, bookId }) {
       try {
-        const response = await axios.post('https://github.com/jovana0/vueapp/tree/main/server/removeFavorite.php', {
+        const response = await axios.post(`${process.env.VUE_APP_API_URL}/removeFavorite.php`, {
           userId,
           bookId,
         });
