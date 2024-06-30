@@ -25,7 +25,7 @@ export default {
   },
   async login({ commit }, userData) {
     try {
-      const response = await axios.post(`http://blogspacejovana.000webhostapp.com/login.php`, userData);
+      const response = await axios.post(`https://blogspacejovana.000webhostapp.com/login.php`, userData);
       if (response.data.success) {
         const user = response.data.user;
         commit('SET_CURRENT_USER', user);
