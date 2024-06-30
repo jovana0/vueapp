@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from "../views/HomeView.vue"
 import SingleBookView from "../views/SingleBookView.vue"
 import TheForm from "../components/books/TheFormComment.vue"
