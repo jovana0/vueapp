@@ -2,7 +2,7 @@ import axios from "axios";
 export default {
   async register({ commit }, userData) {
     try {
-      const response = await axios.post(`https://blogspacejovana.000webhostapp.com/server/register.php`, userData);
+      const response = await axios.post(`https://jovana0.github.io/vueapp/server/register.php`, userData);
       if (response.data.success) {
         const user = {
           id: response.data.user.id,
@@ -25,7 +25,7 @@ export default {
   },
   async login({ commit }, userData) {
     try {
-      const response = await axios.post(`https://blogspacejovana.000webhostapp.com/server/login.php`, userData);
+      const response = await axios.post(`https://jovana0.github.io/vueapp/server/login.php`, userData);
       if (response.data.success) {
         const user = response.data.user;
         commit('SET_CURRENT_USER', user);
@@ -39,7 +39,7 @@ export default {
     }
   },
   async fetchUsers({ commit }) {
-    const response = await fetch(`https://blogspacejovana.000webhostapp.com/server/getUsers.php`);
+    const response = await fetch(`https://jovana0.github.io/vueapp/server/getUsers.php`);
     const users = await response.json();
     commit('SET_USERS', users);
   },
