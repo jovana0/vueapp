@@ -113,7 +113,7 @@ export default {
             this.registerSuccess = response.success;
           if (response.success) {
             this.resetForm();
-            this.$router.push({ name: 'Home' }); // Redirect to home or any other page after registration
+            this.$router.push({ name: 'home' }); // Redirect to home or any other page after registration
           }
         } catch (error) {
           console.error(error);
